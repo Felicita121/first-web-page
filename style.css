@@ -46,7 +46,7 @@ nav {
 	width: 100%;
 	background: hsl(222, 47%, 5%);
 	padding: 30px;
-	text-align: center;
+	text-align: left;
 	z-index: 1000;
 }
 
@@ -165,4 +165,5 @@ footer {
 }
 span {
 	margin-right: 5px;
+
 }
