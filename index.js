@@ -1,11 +1,11 @@
-       // Smooth scroll animation for skills
-        const skillBars = document.querySelectorAll('.bar div');
+// Greeting button
+document.getElementById('greetBtn').addEventListener('click', function() {
+    document.getElementById('greeting').textContent = 'Hello! Thanks for visiting my page 😊';
+});
 
-        window.addEventListener('scroll', () => {
-            skillBars.forEach(bar => {
-                const barTop = bar.getBoundingClientRect().top;
-                if (barTop < window.innerHeight - 50) {
-                    bar.style.width = bar.getAttribute('data-width');
-                }
-            });
-        });
+// Light/Dark mode toggle
+document.getElementById('modeToggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark');
+    const isDark = document.body.classList.contains('dark');
+    this.textContent = isDark ? 'Toggle Light Mode' : 'Toggle Dark Mode';
+});
