@@ -1,168 +1,148 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-	background: hsl(222, 47%, 15%);
-	color: #e5e7eb;
-	font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    transition: background-color 0.5s, color 0.5s;
 }
 
-.profile-card {
+body.dark {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+.portfolio {
+    text-align: left;
+    font-size: 2rem;
+    color: #667eea;
+    font-family: 'Ubuntu', sans-serif;
+}
+.portfolio span {
+    color: #ffffff;
+}
+.hero {
     text-align: center;
-    padding: 60px;
-    background: var(--card-bg);
-    border-radius: 20px;
-    box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.5);
-	max-width: 600px;
-    margin: 120px auto;
-}
-.profile-card p {
-	margin-top: 20px;
-	line-height: 1.5;
-	color: white;
+    padding: 10px 20px;
+    background-image: url('bg3.png');
+    color: white;
 }
 
-.profile-card a {
-	color: #facc15;
-	text-decoration: none;
-}
-
-.profile-img {
-    width: 250px;
-    height: 250px;
+.profile-pic-container img {
     border-radius: 50%;
-    border: 5px solid hsl(0, 0%, 70%);
-    margin-bottom: 15px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid white;
 }
 
-nav {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	background: hsl(222, 47%, 5%);
-	padding: 30px;
-	text-align: center;
-	font-size: 18px;
-	z-index: 1000;
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
-nav a {
-	color: hsl(0, 0%, 100%);
-	margin: 0 15px;
-	text-decoration: none;
-	/* font-weight: bold; */
+.title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
 }
 
-nav a:hover {
-	color: #facc15;
-	text-decoration: underline;
+.contact-info p {
+    margin: 10px 0;
 }
 
-section {
-	padding: 80px 20px;
-	max-width: 1000px;
-	border-radius: 5px;
-	margin: auto;
-	line-height: 1.5;
-	box-shadow: 0 10px 15px -3px rgba(255, 255, 255, 0.5);
+.social-links {
+    margin: 30px 0;
 }
 
+.social-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 30px;
+    background-color: white;
+    transition: background 0.3s, color 0.3s;
+}
+.social-links a img {
+    vertical-align: top;
+    margin-right: 8px;
+}
+
+.social-links a:hover {
+    background: white;
+    color: #667eea;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.about, .js-interaction {
+    background: white;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+body.dark .about, body.dark .js-interaction {
+    background: #1e1e1e;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.379);
+}
 
 h2 {
-	text-align: center;
-	margin-bottom: 40px;
-	margin-top: 0px;
-	font-size: 2.5rem;
-	color: #facc15;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #667eea;
 }
 
-.about {
-	text-align: center;
+.about p {
+    font-size: 1.1rem;
+    text-align: justify;
 }
 
-.skills .skill {
-	margin-bottom: 20px;
+.js-interaction button {
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 1rem;
+    background: #6c7ecc;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
 }
 
-.skills span {
-	display: block;
-	margin-bottom: 5px;
+.js-interaction button:hover {
+    transform: scale(1.05);
 }
 
-.bar {
-	background: #1e293b;
-	border-radius: 20px;
-	overflow: hidden;
-}
-
-.bar div {
-	height: 15px;
-	background: linear-gradient(90deg, #22c55e, #3b82f6);
-	width: 0;
-	transition: width 1.5s ease;
-}
-
-.projects {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	gap: 20px;
-}
-
-.project {
-	background: #1e293b;
-	padding: 20px;
-	border-radius: 10px;
-	transition: transform 0.3s;
-}
-
-.project:hover {
-	transform: translateY(-10px);
-}
-
-.project h3 {
-	color: #facc15;
-	margin-bottom: 10px;
-}
-
-form {
-	max-width: 500px;
-	margin: auto;
-}
-
-button {
-	background: #ffffff;
-	color: hsl(0, 0%, 100%);
-	cursor: default;
-	padding: 20px;
-	width: 50%;
-	border-radius: 15px;
-	border: none;
-	margin-top: 20px;
-}
-
-button:hover {
-	background: linear-gradient(180deg, hsl(0, 0%, 75%), hsl(0, 0%, 90%));
-}
-
-button a {
-	color: black;
-	font-size: 20px;
+#greeting {
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #667eea;
 }
 
 footer {
-	text-align: center;
-	padding: 20px;
-	background: #020617;
-	margin-top: 15px;
+    text-align: center;
+    padding: 30px;
+    background: #333;
+    color: white;
 }
-#contact {
-	text-align: center;
-}
-span {
-	margin-right: 5px;
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    .profile-pic { width: 140px; height: 140px; }
+    .social-links a { display: block; margin: 10px auto; width: fit-content; }
+    .about, .js-interaction { padding: 30px; }
 }
